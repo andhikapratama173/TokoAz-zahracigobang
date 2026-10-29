@@ -1,0 +1,310 @@
+/* Dark Mode Theme */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+  border: 1px solid #2d2d2d;
+}
+
+header h1 {
+  margin: 0 0 5px 0;
+  color: #ffffff;
+}
+
+header p {
+  margin: 0 0 15px 0;
+  color: #a0a0a0;
+}
+
+#inputCari {
+  width: 90%;
+  max-width: 450px;
+  padding: 10px 15px;
+  font-size: 15px;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #3d3d3d;
+  border-radius: 8px;
+  outline: none;
+}
+
+#inputCari:focus {
+  border-color: #2ecc71;
+}
+
+/* Layout 2 Kolom */
+.layout-utama {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.area-katalog {
+  flex: 2;
+  min-width: 300px;
+}
+
+.area-kasir {
+  flex: 1;
+  min-width: 280px;
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  border: 1px solid #2d2d2d;
+  height: fit-content;
+}
+
+/* Form Tambah Barang */
+.form-tambah {
+  background: #1e1e1e;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  border: 1px solid #2d2d2d;
+}
+
+.form-tambah h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.form-tambah form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.form-tambah input {
+  padding: 8px 12px;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #3d3d3d;
+  border-radius: 6px;
+  flex: 1;
+  min-width: 120px;
+}
+
+.form-tambah input::placeholder {
+  color: #888888;
+}
+
+.form-tambah button {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form-tambah button:hover {
+  background: #219150;
+}
+
+/* Katalog Grid */
+.katalog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.kartu-barang {
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  border: 1px solid #2d2d2d;
+  text-align: center;
+}
+
+.kartu-barang h3 {
+  margin: 0 0 5px 0;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.kartu-barang .harga {
+  color: #2ecc71;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.kartu-barang .stok {
+  font-size: 0.85rem;
+  color: #a0a0a0;
+  margin-bottom: 10px;
+}
+
+.kartu-barang button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+}
+
+.kartu-barang button:hover {
+  background-color: #2980b9;
+}
+
+.kartu-barang button:disabled {
+  background-color: #444444;
+  color: #888888;
+  cursor: not-allowed;
+}
+
+/* Area Kasir */
+.item-keranjang {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #2d2d2d;
+}
+
+.total-bayar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  margin: 15px 0;
+  color: #ffffff;
+}
+
+/* Styling Area Input Pembayaran */
+.area-pembayaran {
+  background-color: #2a2a2a;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #3d3d3d;
+}
+
+.area-pembayaran label {
+  display: block;
+  font-size: 0.85rem;
+  color: #a0a0a0;
+  margin-bottom: 5px;
+}
+
+.area-pembayaran input {
+  width: 100%;
+  padding: 8px 10px;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: 1px solid #3d3d3d;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.kembalian-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.kembalian-info strong {
+  color: #f1c40f;
+}
+
+.btn-bayar {
+  width: 100%;
+  background: #e67e22;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-bayar:hover {
+  background: #d35400;
+}
+
+.kosong {
+  color: #888888;
+}
+
+/* Area Riwayat Transaksi */
+.area-riwayat {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  border: 1px solid #2d2d2d;
+}
+
+.header-riwayat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.header-riwayat h2 {
+  margin: 0;
+  color: #ffffff;
+}
+
+.btn-hapus-riwayat {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.btn-hapus-riwayat:hover {
+  background: #c0392b;
+}
+
+.tabel-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #2d2d2d;
+}
+
+th {
+  background-color: #2a2a2a;
+  color: #2ecc71;
+}
+
+td {
+  font-size: 0.95rem;
+}

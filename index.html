@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toko Az-zahra</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Toko Az-zahra</h1>
+    <p>Sedia kebutuhan pokok sehari-hari lengkap dan murah</p>
+    <input type="text" id="inputCari" placeholder="Ketik nama barang di sini...">
+  </header>
+
+  <div class="layout-utama">
+    <!-- Kolom Kiri: Form Tambah & Katalog -->
+    <div class="area-katalog">
+      <!-- Form Tambah Barang Baru -->
+      <div class="form-tambah">
+        <h3>+ Tambah Barang Baru</h3>
+        <form id="formBarang">
+          <input type="text" id="namaBarang" placeholder="Nama Barang" required>
+          <input type="number" id="hargaBarang" placeholder="Harga (Rp)" required>
+          <input type="number" id="stokBarang" placeholder="Jumlah Stok" required>
+          <button type="submit">Simpan Barang</button>
+        </form>
+      </div>
+
+      <!-- Daftar Barang -->
+      <h2>Katalog Barang</h2>
+      <div id="katalogBarang" class="katalog-container"></div>
+    </div>
+
+    <!-- Kolom Kanan: Kasir / Keranjang Belanja -->
+    <div class="area-kasir">
+      <h2>🛒 Keranjang Kasir</h2>
+      <div id="daftarKeranjang">
+        <p class="kosong">Belum ada barang dipilih.</p>
+      </div>
+      <hr>
+      <div class="total-bayar">
+        <span>Total:</span>
+        <strong id="totalHarga">Rp 0</strong>
+      </div>
+
+      <!-- Input Uang Pembeli & Kembalian -->
+      <div class="area-pembayaran">
+        <label for="inputBayar">Uang Pembeli (Rp):</label>
+        <input type="number" id="inputBayar" placeholder="Masukkan nominal..." oninput="hitungKembalian()">
+        
+        <div class="kembalian-info">
+          <span>Kembalian:</span>
+          <strong id="totalKembalian">Rp 0</strong>
+        </div>
+      </div>
+
+      <button id="btnBayar" class="btn-bayar" onclick="selesaiTransaksi()">Selesaikan Transaksi</button>
+    </div>
+  </div>
+
+  <!-- Area Riwayat Transaksi -->
+  <div class="area-riwayat">
+    <div class="header-riwayat">
+      <h2>📜 Riwayat Penjualan</h2>
+      <button class="btn-hapus-riwayat" onclick="hapusRiwayat()">Hapus Semua Riwayat</button>
+    </div>
+    <div class="tabel-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Waktu</th>
+            <th>Detail Barang</th>
+            <th>Total Belanja</th>
+            <th>Bayar</th>
+            <th>Kembalian</th>
+          </tr>
+        </thead>
+        <tbody id="tabelRiwayat">
+          <!-- Data riwayat dimuat di sini -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
